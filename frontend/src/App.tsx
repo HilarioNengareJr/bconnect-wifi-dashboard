@@ -1,4 +1,6 @@
+import { SessionsTable } from "./components/SessionsTable";
 import { SyncStatusCard } from "./components/SyncStatusCard";
+import { VenuesTable } from "./components/VenuesTable";
 import { useSync } from "./hooks/useSync";
 
 export default function App() {
@@ -20,17 +22,17 @@ export default function App() {
         />
 
         <section className="rounded-xl border border-border bg-surface p-6 shadow-card">
-          <h2 className="text-base font-semibold leading-6 text-text-primary">Venues</h2>
-          <p className="mt-2 text-xs font-normal leading-4 text-text-secondary">
-            {loading ? "Loading…" : `${venues.length} venues synced`}
-          </p>
+          <h2 className="mb-4 text-base font-semibold leading-6 text-text-primary">
+            Venues
+          </h2>
+          <VenuesTable venues={venues} loading={loading} />
         </section>
 
         <section className="rounded-xl border border-border bg-surface p-6 shadow-card">
-          <h2 className="text-base font-semibold leading-6 text-text-primary">Sessions</h2>
-          <p className="mt-2 text-xs font-normal leading-4 text-text-secondary">
-            {loading ? "Loading…" : `${sessions.length} sessions synced`}
-          </p>
+          <h2 className="mb-4 text-base font-semibold leading-6 text-text-primary">
+            Sessions
+          </h2>
+          <SessionsTable sessions={sessions} loading={loading} />
         </section>
       </main>
     </div>
