@@ -1,0 +1,197 @@
+{
+  "venues": [
+    {
+      "provider_id": "v_001",
+      "name": "Harbour View Mall",
+      "address": "12 Dock Road, V&A Waterfront",
+      "city": "Cape Town",
+      "timezone": "Africa/Johannesburg"
+    },
+    {
+      "provider_id": "v_002",
+      "name": "Sandton Central Office Park",
+      "address": "5 Rivonia Road, Sandton",
+      "city": "Johannesburg",
+      "timezone": "Africa/Johannesburg"
+    },
+    {
+      "provider_id": "v_003",
+      "name": "Umhlanga Beachfront Hotel",
+      "address": "1 Lighthouse Road, Umhlanga Rocks",
+      "city": "Durban",
+      "timezone": "Africa/Johannesburg"
+    }
+  ],
+  "access_points": [
+    {
+      "provider_id": "ap_001",
+      "venue_provider_id": "v_001",
+      "name": "Mall Entrance",
+      "mac_address": "AC:1F:6B:11:22:01",
+      "model": "Ruckus R650",
+      "status": "online"
+    },
+    {
+      "provider_id": "ap_002",
+      "venue_provider_id": "v_001",
+      "name": "Food Court",
+      "mac_address": "AC:1F:6B:11:22:02",
+      "model": "Ruckus R650",
+      "status": "online"
+    },
+    {
+      "provider_id": "ap_003",
+      "venue_provider_id": "v_002",
+      "name": "Reception Lobby",
+      "mac_address": "AC:1F:6B:33:44:01",
+      "model": "Ruckus R750",
+      "status": "online"
+    },
+    {
+      "provider_id": "ap_004",
+      "venue_provider_id": "v_002",
+      "name": "3rd Floor Open Plan",
+      "mac_address": "AC:1F:6B:33:44:02",
+      "model": "Ruckus R750",
+      "status": "offline"
+    },
+    {
+      "provider_id": "ap_005",
+      "venue_provider_id": "v_003",
+      "name": "Pool Deck",
+      "mac_address": "AC:1F:6B:55:66:01",
+      "model": "Ruckus T350",
+      "status": "online"
+    },
+    {
+      "provider_id": "ap_006",
+      "venue_provider_id": "v_003",
+      "name": "Conference Wing",
+      "mac_address": "AC:1F:6B:55:66:02",
+      "model": "Ruckus R650",
+      "status": "online"
+    }
+  ],
+  "sessions": [
+    {
+      "provider_id": "s_001",
+      "venue_provider_id": "v_001",
+      "ap_provider_id": "ap_001",
+      "client_mac": "5C:3A:45:AA:01:01",
+      "username": "guest-portal",
+      "device_type": "phone",
+      "started_at": "2026-06-18T07:42:00Z",
+      "ended_at": "2026-06-18T08:15:00Z",
+      "bytes_in": 154238976,
+      "bytes_out": 24117248
+    },
+    {
+      "provider_id": "s_002",
+      "venue_provider_id": "v_001",
+      "ap_provider_id": "ap_002",
+      "client_mac": "5C:3A:45:AA:01:02",
+      "username": null,
+      "device_type": "laptop",
+      "started_at": "2026-06-18T08:05:00Z",
+      "ended_at": null,
+      "bytes_in": 982130688,
+      "bytes_out": 143654912
+    },
+    {
+      "provider_id": "s_003",
+      "venue_provider_id": "v_001",
+      "ap_provider_id": "ap_002",
+      "client_mac": "5C:3A:45:AA:01:03",
+      "username": "guest-portal",
+      "device_type": "tablet",
+      "started_at": "2026-06-18T08:30:00Z",
+      "ended_at": null,
+      "bytes_in": 45088768,
+      "bytes_out": 8912896
+    },
+    {
+      "provider_id": "s_004",
+      "venue_provider_id": "v_002",
+      "ap_provider_id": "ap_003",
+      "client_mac": "5C:3A:45:BB:02:01",
+      "username": "j.dlamini",
+      "device_type": "laptop",
+      "started_at": "2026-06-18T06:58:00Z",
+      "ended_at": "2026-06-18T09:40:00Z",
+      "bytes_in": 3221225472,
+      "bytes_out": 512000000
+    },
+    {
+      "provider_id": "s_005",
+      "venue_provider_id": "v_002",
+      "ap_provider_id": "ap_003",
+      "client_mac": "5C:3A:45:BB:02:02",
+      "username": "m.naidoo",
+      "device_type": "phone",
+      "started_at": "2026-06-18T09:12:00Z",
+      "ended_at": null,
+      "bytes_in": 67108864,
+      "bytes_out": 12582912
+    },
+    {
+      "provider_id": "s_006",
+      "venue_provider_id": "v_003",
+      "ap_provider_id": "ap_005",
+      "client_mac": "5C:3A:45:CC:03:01",
+      "username": "guest-portal",
+      "device_type": "phone",
+      "started_at": "2026-06-18T10:20:00Z",
+      "ended_at": null,
+      "bytes_in": 28311552,
+      "bytes_out": 5242880
+    },
+    {
+      "provider_id": "s_007",
+      "venue_provider_id": "v_003",
+      "ap_provider_id": "ap_005",
+      "client_mac": "5C:3A:45:CC:03:02",
+      "username": null,
+      "device_type": "laptop",
+      "started_at": "2026-06-18T10:45:00Z",
+      "ended_at": null,
+      "bytes_in": 734003200,
+      "bytes_out": 98566144
+    },
+    {
+      "provider_id": "s_008",
+      "venue_provider_id": "v_003",
+      "ap_provider_id": "ap_006",
+      "client_mac": "5C:3A:45:CC:03:03",
+      "username": "conf-guest",
+      "device_type": "tablet",
+      "started_at": "2026-06-18T11:00:00Z",
+      "ended_at": "2026-06-18T11:35:00Z",
+      "bytes_in": 120586240,
+      "bytes_out": 18874368
+    },
+    {
+      "provider_id": "s_009",
+      "venue_provider_id": "v_003",
+      "ap_provider_id": "ap_006",
+      "client_mac": "5C:3A:45:CC:03:04",
+      "username": "conf-guest",
+      "device_type": "laptop",
+      "started_at": "2026-06-18T11:10:00Z",
+      "ended_at": null,
+      "bytes_in": 256901120,
+      "bytes_out": 41943040
+    },
+    {
+      "provider_id": "s_010",
+      "venue_provider_id": "v_001",
+      "ap_provider_id": "ap_001",
+      "client_mac": "5C:3A:45:AA:01:04",
+      "username": null,
+      "device_type": "phone",
+      "started_at": "2026-06-18T11:50:00Z",
+      "ended_at": null,
+      "bytes_in": 18874368,
+      "bytes_out": 3145728
+    }
+  ]
+}

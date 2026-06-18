@@ -6,7 +6,9 @@ services:
       POSTGRES_PASSWORD: bconnect
       POSTGRES_DB: bconnect
     ports:
-      - "5432:5432"
+      # Host 5433 -> container 5432. Host 5432 is taken by another local project's
+      # Postgres (rain-skns), so we remap the host port to avoid the clash.
+      - "5433:5432"
     volumes:
       - bconnect_pgdata:/var/lib/postgresql/data
 
