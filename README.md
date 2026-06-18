@@ -6,6 +6,18 @@ A small full-stack app that integrates with a (mocked) third-party Wi-Fi control
 
 ---
 
+## Screenshots
+
+The dashboard — sync status, rule-based insights, and venues with their access points:
+
+![Dashboard — sync status, insights, and venues](docs/dashboard.png)
+
+Sessions — connected users with venue, access point, device, start time, and data usage:
+
+![Sessions table](docs/sessions.png)
+
+---
+
 ## What it does
 
 - **Sync on demand** — pull the latest venues, access points, and sessions from the Wi-Fi controller
