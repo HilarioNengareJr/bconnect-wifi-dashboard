@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font */
+  --font-sans: "Figtree", sans-serif;
+
+  /* Page and surface backgrounds (dark) */
+  --color-background: #0f1115;
+  --color-background-elevated: #151922;
+  --color-surface: #1a1f29;
+  --color-surface-secondary: #151922;
+  --color-surface-muted: #222836;
+
+  /* Borders */
+  --color-border: #2a3140;
+  --color-border-light: #222836;
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a7b4;
+  --color-text-muted: #6b7280;
+
+  /* Primary accent — teal CTA */
+  --color-accent: #18d3c5;
+  --color-accent-dark: #0fb8aa;
+  --color-accent-muted: #14323a;
+  --color-accent-foreground: #0f1115;
+
+  /* Success — online / completed */
+  --color-success: #22c55e;
+  --color-success-light: #14331f;
+  --color-success-foreground: #4ade80;
+
+  /* Warning — amber */
+  --color-warning: #f59e0b;
+  --color-warning-light: #3a2e14;
+  --color-warning-foreground: #fbbf24;
+
+  /* Error — failed / offline */
+  --color-error: #ef4444;
+  --color-error-light: #3a1d1d;
+  --color-error-foreground: #f87171;
+
+  /* Info — running / neutral status */
+  --color-info: #38bdf8;
+  --color-info-light: #142a3a;
+  --color-info-foreground: #7dd3fc;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}

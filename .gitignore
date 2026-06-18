@@ -1,0 +1,25 @@
+# Personal working notes (see /import)
+context/
+
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node / frontend
+node_modules/
+dist/
+*.local
+
+# Local SQLite (if used as fallback)
+*.db
+
+# OS / editor
+.DS_Store
