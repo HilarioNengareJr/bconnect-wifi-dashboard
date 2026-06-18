@@ -57,3 +57,20 @@ class SessionOut(BaseModel):
     ended_at: datetime | None = None
     bytes_in: int
     bytes_out: int
+
+
+class InsightFlag(BaseModel):
+    level: str
+    message: str
+
+
+class InsightsOut(BaseModel):
+    total_venues: int
+    total_access_points: int
+    online_access_points: int
+    offline_access_points: int
+    total_sessions: int
+    active_sessions: int
+    busiest_venue: str | None = None
+    total_bytes: int
+    flags: list[InsightFlag] = []

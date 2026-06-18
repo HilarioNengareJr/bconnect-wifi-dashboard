@@ -1,4 +1,4 @@
-type Tone = "success" | "info" | "error" | "accent" | "muted";
+type Tone = "success" | "info" | "warning" | "error" | "accent" | "muted";
 
 type Props = {
   label: string;
@@ -8,6 +8,7 @@ type Props = {
 const TONE_CLASSES: Record<Tone, string> = {
   success: "bg-success-light text-success-foreground",
   info: "bg-info-light text-info-foreground",
+  warning: "bg-warning-light text-warning-foreground",
   error: "bg-error-light text-error-foreground",
   accent: "bg-accent-muted text-accent",
   muted: "bg-surface-muted text-text-secondary",

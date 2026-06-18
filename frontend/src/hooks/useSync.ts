@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useState } from "react";
 
 import {
+  getInsights,
   getSessions,
   getSyncStatus,
   getVenues,
   triggerSync,
 } from "../api/client";
-import type { Session, SyncResult, SyncStatus, Venue } from "../types";
+import type { Insights, Session, SyncResult, SyncStatus, Venue } from "../types";
 
 const LOAD_ERROR = "Could not load dashboard data. Is the backend running?";
 const SYNC_ERROR = "Sync failed. Please try again.";
@@ -19,16 +20,19 @@ export function useSync() {
   const [syncing, setSyncing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastSyncResult, setLastSyncResult] = useState<SyncResult | null>(null);
+  const [insights, setInsights] = useState<Insights | null>(null);
 
   const refresh = useCallback(async () => {
-    const [status, venueList, sessionList] = await Promise.all([
+    const [status, venueList, sessionList, insightData] = await Promise.all([
       getSyncStatus(),
       getVenues(),
       getSessions(),
+      getInsights(),
     ]);
     setSyncStatus(status);
     setVenues(venueList);
     setSessions(sessionList);
+    setInsights(insightData);
   }, []);
 
   useEffect(() => {
@@ -70,6 +74,7 @@ export function useSync() {
     syncStatus,
     venues,
     sessions,
+    insights,
     loading,
     syncing,
     error,

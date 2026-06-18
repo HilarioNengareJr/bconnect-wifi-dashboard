@@ -1,11 +1,21 @@
+import { InsightsPanel } from "./components/InsightsPanel";
 import { SessionsTable } from "./components/SessionsTable";
 import { SyncStatusCard } from "./components/SyncStatusCard";
 import { VenuesTable } from "./components/VenuesTable";
 import { useSync } from "./hooks/useSync";
 
 export default function App() {
-  const { syncStatus, venues, sessions, loading, syncing, error, lastSyncResult, runSync } =
-    useSync();
+  const {
+    syncStatus,
+    venues,
+    sessions,
+    insights,
+    loading,
+    syncing,
+    error,
+    lastSyncResult,
+    runSync,
+  } = useSync();
 
   return (
     <div className="min-h-screen bg-background text-text-primary">
@@ -20,6 +30,13 @@ export default function App() {
           lastSyncResult={lastSyncResult}
           onSync={runSync}
         />
+
+        <section className="rounded-xl border border-border bg-surface p-6 shadow-card">
+          <h2 className="mb-4 text-base font-semibold leading-6 text-text-primary">
+            Insights
+          </h2>
+          <InsightsPanel insights={insights} loading={loading} />
+        </section>
 
         <section className="rounded-xl border border-border bg-surface p-6 shadow-card">
           <h2 className="mb-4 text-base font-semibold leading-6 text-text-primary">

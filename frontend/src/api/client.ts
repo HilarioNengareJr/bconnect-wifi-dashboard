@@ -1,4 +1,4 @@
-import type { Venue, Session, SyncStatus, SyncResult } from "../types";
+import type { Insights, Venue, Session, SyncStatus, SyncResult } from "../types";
 
 const BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
 
@@ -16,3 +16,5 @@ export const getSyncStatus = () =>
 export const getVenues = () => fetch(`${BASE}/venues`).then(json<Venue[]>);
 
 export const getSessions = () => fetch(`${BASE}/sessions`).then(json<Session[]>);
+
+export const getInsights = () => fetch(`${BASE}/insights`).then(json<Insights>);

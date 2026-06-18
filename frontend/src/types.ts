@@ -45,3 +45,20 @@ export type SyncResult = {
   synced_at: string | null;
   error: string | null;
 };
+
+export type InsightFlag = {
+  level: string;
+  message: string;
+};
+
+export type Insights = {
+  total_venues: number;
+  total_access_points: number;
+  online_access_points: number;
+  offline_access_points: number;
+  total_sessions: number;
+  active_sessions: number;
+  busiest_venue: string | null;
+  total_bytes: number;
+  flags: InsightFlag[];
+};
