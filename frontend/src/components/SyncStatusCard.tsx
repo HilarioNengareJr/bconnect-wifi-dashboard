@@ -57,7 +57,7 @@ export function SyncStatusCard({
   const recordsSynced = syncStatus?.records_synced ?? null;
 
   return (
-    <section className="rounded-xl border border-border bg-surface p-6 shadow-[0_1px_3px_rgba(0,0,0,0.4)]">
+    <section className="rounded-xl border border-border bg-surface p-6 shadow-card">
       <div className="flex items-start justify-between gap-4">
         <div className="flex flex-col gap-1">
           <h2 className="text-base font-semibold leading-6 text-text-primary">
