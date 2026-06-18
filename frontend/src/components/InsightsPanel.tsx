@@ -1,3 +1,4 @@
+// InsightsPanel — summary stats and anomaly flags from the rule-based insights endpoint.
 import { EmptyState } from "./EmptyState";
 import { StatusBadge } from "./StatusBadge";
 import type { Insights } from "../types";

@@ -1,3 +1,5 @@
+// TypeScript types mirroring the backend API response shapes.
+
 export type AccessPoint = {
   provider_id: string;
   name: string;

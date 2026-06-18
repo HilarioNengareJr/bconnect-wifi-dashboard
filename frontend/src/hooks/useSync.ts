@@ -1,3 +1,4 @@
+// useSync — loads all dashboard data on mount and runs the sync action.
 import { useCallback, useEffect, useState } from "react";
 
 import {

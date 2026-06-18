@@ -1,3 +1,4 @@
+// StatusBadge — a small pill badge colored by semantic tone.
 type Tone = "success" | "info" | "warning" | "error" | "accent" | "muted";
 
 type Props = {

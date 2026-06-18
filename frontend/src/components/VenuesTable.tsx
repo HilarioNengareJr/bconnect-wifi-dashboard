@@ -1,3 +1,4 @@
+// VenuesTable — one block per venue with a sub-table of its access points.
 import { EmptyState } from "./EmptyState";
 import { StatusBadge } from "./StatusBadge";
 import type { Venue } from "../types";

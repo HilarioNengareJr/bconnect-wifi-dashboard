@@ -1,3 +1,5 @@
+"""SQLAlchemy ORM models: Venue, AccessPoint, Session, and SyncLog."""
+
 from datetime import datetime, timezone
 
 from sqlalchemy import BigInteger, DateTime, ForeignKey, Integer, String

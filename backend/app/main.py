@@ -1,3 +1,5 @@
+"""FastAPI app entrypoint: lifespan startup, CORS, and router registration."""
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI

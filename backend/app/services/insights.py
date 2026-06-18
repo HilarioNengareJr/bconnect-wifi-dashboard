@@ -1,3 +1,5 @@
+"""Rule-based insights: aggregate the synced data into counts and anomaly flags."""
+
 from sqlalchemy.orm import Session
 
 from app import models
@@ -5,6 +7,7 @@ from app.schemas import InsightFlag, InsightsOut
 
 
 def build_insights(db: Session) -> InsightsOut:
+    """Compute the insights summary from the currently synced venues/APs/sessions."""
     venues = db.query(models.Venue).all()
     access_points = db.query(models.AccessPoint).all()
     sessions = db.query(models.Session).all()

@@ -1,3 +1,4 @@
+// App — dashboard layout: wires the useSync hook and lays out the cards and tables.
 import { InsightsPanel } from "./components/InsightsPanel";
 import { SessionsTable } from "./components/SessionsTable";
 import { SyncStatusCard } from "./components/SyncStatusCard";

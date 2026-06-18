@@ -1,3 +1,4 @@
+// API client — the only module that knows the backend base URL and endpoints.
 import type { Insights, Venue, Session, SyncStatus, SyncResult } from "../types";
 
 const BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8000";

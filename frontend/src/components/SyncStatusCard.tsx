@@ -1,3 +1,4 @@
+// SyncStatusCard — shows sync status, records synced, last-sync time, and the Sync Now button.
 import { StatusBadge } from "./StatusBadge";
 import type { SyncResult, SyncStatus } from "../types";
 import { formatRelativeTime } from "../utils/format";

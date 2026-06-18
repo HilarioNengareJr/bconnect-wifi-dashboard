@@ -1,3 +1,5 @@
+"""Sync service: pull the controller snapshot, upsert by provider_id, log the run."""
+
 from datetime import datetime, timezone
 
 from sqlalchemy.orm import Session
@@ -79,6 +81,7 @@ def _session_fields(
 
 
 def run_sync(db: Session) -> SyncResultOut:
+    """Sync the full snapshot in one transaction, writing one sync_logs row either way."""
     log = models.SyncLog(status="running")
     db.add(log)
     db.flush()

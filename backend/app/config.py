@@ -1,3 +1,5 @@
+"""Application settings loaded once from the environment / .env file."""
+
 from typing import Annotated
 
 from pydantic import field_validator

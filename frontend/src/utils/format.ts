@@ -1,3 +1,5 @@
+// Formatting helpers for bytes, dates, and relative time.
+
 const BYTE_UNITS = ["B", "KB", "MB", "GB", "TB"];
 
 // Backend timestamps are naive UTC (no zone suffix); append Z so the browser

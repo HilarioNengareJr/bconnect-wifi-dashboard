@@ -1,3 +1,5 @@
+"""Mock third-party Wi-Fi controller — returns a JSON snapshot, knows nothing of our DB."""
+
 import json
 from pathlib import Path
 
@@ -11,6 +13,7 @@ class ControllerError(Exception):
 
 
 def fetch_snapshot() -> dict:
+    """Return the controller's venues/access_points/sessions snapshot."""
     # FAIL_SYNC simulates a provider outage so the sync failure path is exercisable.
     if settings.fail_sync:
         raise ControllerError("Wi-Fi controller unreachable (simulated)")

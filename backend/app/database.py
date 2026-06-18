@@ -1,3 +1,5 @@
+"""Database engine, session factory, and the FastAPI session dependency."""
+
 from collections.abc import Iterator
 
 from sqlalchemy import create_engine
@@ -22,6 +24,7 @@ class Base(DeclarativeBase):
 
 
 def get_db() -> Iterator[Session]:
+    """Yield a database session per request and always close it."""
     db = SessionLocal()
     try:
         yield db
@@ -30,6 +33,7 @@ def get_db() -> Iterator[Session]:
 
 
 def init_db() -> None:
+    """Create all tables on startup (Alembic would replace this in production)."""
     # Acceptable for a take-home; production would use Alembic migrations.
     from app import models  # noqa: F401  ensure models are registered on Base
 

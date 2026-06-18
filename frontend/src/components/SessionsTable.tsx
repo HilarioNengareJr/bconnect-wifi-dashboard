@@ -1,3 +1,4 @@
+// SessionsTable — flat table of connected-user sessions with venue/AP context and data usage.
 import { EmptyState } from "./EmptyState";
 import { StatusBadge } from "./StatusBadge";
 import type { Session } from "../types";

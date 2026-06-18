@@ -1,3 +1,4 @@
+// EmptyState — centered title + message for sections with no data yet.
 type Props = {
   title: string;
   message: string;
