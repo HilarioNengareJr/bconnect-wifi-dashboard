@@ -1,9 +1,19 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
-app = FastAPI(title="b connect Wi-Fi Dashboard")
+from app.database import init_db
 
-# Skeleton only. CORS, init_db(), and routers are wired in their own features
-# (config 03, schema 02, endpoints onward) — not here.
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
+
+
+app = FastAPI(title="b connect Wi-Fi Dashboard", lifespan=lifespan)
+
+# CORS and routers are wired in their own features (endpoints onward) — not here.
 
 
 @app.get("/health")
