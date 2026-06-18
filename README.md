@@ -126,6 +126,7 @@ uvicorn app.main:app --reload --port 8000
 | GET    | `/venues`       | List venues with their access points                             |
 | GET    | `/sessions`     | List sessions (connected users) with venue + access-point context |
 | GET    | `/sync-status`  | Most recent sync: status, last sync time, records synced         |
+| GET    | `/insights`     | Rule-based summary: counts, busiest venue, throughput, anomaly flags |
 
 A simulated controller failure (`FAIL_SYNC=true`) returns HTTP 200 with `status: "failed"` and an error message — a handled result, never a crash.
 
@@ -165,7 +166,7 @@ A simulated controller failure (`FAIL_SYNC=true`) returns HTTP 200 with `status:
 - Configurable retry/backoff on transient controller failures
 - A proper test suite (pytest + httpx) covering the sync/dedup contract
 - Authentication and per-operator scoping
-- The optional AI insights panel (venue activity summary, anomaly flags)
+- An LLM-backed natural-language layer over the existing rule-based insights
 
 ---
 
@@ -177,4 +178,4 @@ Built with the assistance of AI coding tools (Claude Code) for scaffolding, boil
 
 ## Status
 
-Core app complete end to end — sync, status, venues, and sessions all working against the four endpoints, on the b connect brand theme. Verified on both SQLite (the zero-setup default) and PostgreSQL (via the docker-compose container). The optional AI insights extension is not built.
+Complete end to end — sync, status, venues, sessions, and a rule-based insights panel, all working against the API, on the b connect brand theme. Verified on both SQLite (the zero-setup default) and PostgreSQL (via the docker-compose container). The insights are rule-based (no external API/key); an LLM-backed summary is a natural next step.
